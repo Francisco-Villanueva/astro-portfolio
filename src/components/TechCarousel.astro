@@ -1,0 +1,50 @@
+---
+const technologies = [
+  { name: "TypeScript", logo: "/tech/ts.webp" },
+  { name: "Next.js", logo: "/tech/next.png" },
+  { name: "MobX", logo: "/tech/mobx.png" },
+  { name: "React", logo: "/tech/react.png" },
+  { name: "Node.js", logo: "/tech/node.png" },
+  { name: "Express", logo: "/tech/express.png" },
+  { name: "Dcoker", logo: "/tech/docker.png" },
+  { name: "MongoDB", logo: "/tech/mongo.png" },
+  { name: "NestJS", logo: "/tech/nest.png" },
+  { name: "Tailwind", logo: "/tech/tailwind.png" },
+  { name: "Jira", logo: "/tech/jira.png" },
+  // Agrega más tecnologías si es necesario
+];
+---
+
+<style>
+  .carousel {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .carousel-track {
+    display: flex;
+    animation: scroll 20s linear infinite;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+</style>
+
+<div class="carousel">
+  <div class="carousel-track">
+    {
+      technologies.map((tech) => (
+        <div class="carousel-item w-[100px]  justify-center flex items-center gap-2 text-gray-500 font-bold">
+          <img src={tech.logo} alt={tech.name} class="h-10  grayscale" />
+        </div>
+      ))
+    }
+  </div>
+</div>

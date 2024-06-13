@@ -1,0 +1,58 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const EXPERIENCIE = [
+  // {
+  //   date: "July, 2024 - Present",
+  //   title: "Software Developer",
+  //   company: "Mercado Libre",
+  //   logo: "/experience/meli.jpeg",
+  //   description:
+  //     "Technical teacher in Front End web development for the municipality of Junin, province of Buenos Aires, Argentina.",
+  // },
+  {
+    date: "May, 2024 - Present",
+    title: "Front End Teacher",
+    company: "Bolster",
+    logo: "/experience/bolster.jpeg",
+    description:
+      "Technical teacher in Front End web development for the municipality of Junin, province of Buenos Aires, Argentina.",
+  },
+  {
+    date: "September, 2023 - Present",
+    title: "Full Stack Developer",
+    company: "First Plug",
+    logo: "/experience/firstPlug.jpeg",
+    description:
+      "Development of a platform for management, acquisition, and inventory control for onboarding and equipment of remote workers.",
+  },
+  {
+    date: "May, 2024",
+    title: " Software Developer",
+    company: "Reina Burguesa",
+    logo: "/experience/reinaBurguesa.jpeg",
+    deploy: "https://reinaburguesa.vercel.app/",
+    description: `Development of a website in order to publish, inform and manage the sale of tickets for the opening of the Reina Burguesa location, integrating Mercado Pago as a payment system.
+      A "customers" section was developed, which is the page where consumers enter to buy tickets, and a "backoffice" section was created where payment and purchase information for the different events was managed.`,
+  },
+  {
+    date: "September, 2023 -  February, 2024",
+    title: "Software Developer",
+    company: "Reset Salon",
+    logo: "/experience/resetBlack.png",
+    deploy: "https://www.salonreset.com.ar/",
+    description: `Web page development and design.
+      Appointment management.
+      Administration page to manage barbers and their availability schedules, and also to view the hair salon's statistics.`,
+  },
+];
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>

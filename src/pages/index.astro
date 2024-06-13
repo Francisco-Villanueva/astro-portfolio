@@ -1,0 +1,41 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Projects from "../components/Projects.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Experience from "../components/Experience.astro";
+import Hero from "../components/Hero.astro";
+import Briefcase from "../components/icons/Briefcase.astro";
+import CodeIcon from "../components/icons/Code.astro";
+import TechCarousel from "../components/TechCarousel.astro";
+---
+
+<Layout title="Porfolio | Villanueva">
+  <main class="pb-10 px-4">
+    <SectionContainer class="py-16 md:py-36 space-y-6">
+      <Hero />
+      <TechCarousel />
+    </SectionContainer>
+    <div class="space-y-24">
+      <SectionContainer id="experience">
+        <h2
+          class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+        >
+          <Briefcase class="size-8" />
+          Work Experience
+        </h2>
+        <Experience />
+      </SectionContainer>
+
+      <SectionContainer id="projects">
+        <h2
+          class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+        >
+          <CodeIcon class="size-7" />
+          Projects
+        </h2>
+
+        <Projects />
+      </SectionContainer>
+    </div>
+  </main>
+</Layout>
